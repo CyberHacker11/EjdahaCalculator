@@ -39,6 +39,64 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom" 
             FontFamily="Microsoft Sans Serif"/>
+            
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="MC"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+            <Label Grid.Column="1"
+                   Content="MR"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+            <Label Grid.Column="2"
+                   Content="M+"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+            <Label Grid.Column="3"
+                   Content="M-"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+            <Label Grid.Column="4"
+                   Content="MS"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+            <Label Grid.Column="5"
+                   Content="M"
+                   FontSize="15"
+                   Foreground="White"
+                   FontFamily="Arial" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+        </Grid>
 
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
