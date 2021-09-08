@@ -1,0 +1,283 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="575" Width="380" Background="#FF212121">
+    <Grid Margin="0">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Name="lbl_MicroDisplay"
+            Grid.Row="1" 
+            Content="" 
+            FontSize="16"
+            Foreground="White"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top" 
+            FontFamily="Microsoft Sans Serif"
+            Padding="0, 0, 0, 0" Margin="0,5,5,0"/>
+
+        <Label
+            Name="lbl_Display"
+            Grid.Row="1" 
+            Content="0" 
+            FontSize="60"
+            Foreground="White"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom" 
+            FontFamily="Microsoft Sans Serif"/>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Button
+                x:Name="btn_Percent"
+                Content="%"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_Percent_Click"/>
+            
+            <Button
+                Grid.Column="1"
+                x:Name="btn_CE"
+                Content="CE"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_CE_Click"/>
+            
+            <Button
+                Grid.Column="2"
+                x:Name="btn_Clean"
+                Content="C"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_Clean_Click"/>
+            
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Backspace"
+                Content="⌫"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_Backspace_Click"/>
+            
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_SquareRoot1"
+                Content="¹/x"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_SquareRoot1_Click"/>
+            <Button
+                Grid.Column="1"
+                x:Name="btn_SquareRoot2"
+                Content="x²"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_SquareRoot2_Click"/>
+            <Button
+                Grid.Column="2"
+                x:Name="btn_SquareRoot3"
+                Content=" √х"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_SquareRoot3_Click"/>
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Division"
+                Content="÷"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="25"
+                Foreground="White" Click="btn_Division_Click"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_Seven"
+                Content="7"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="1"
+                x:Name="btn_Eight"
+                Content="8"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="2"
+                x:Name="btn_Nine"
+                Content="9"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Multiply"
+                Content="X"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="14"
+                Foreground="White" Click="btn_Multiply_Click"/>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_Four"
+                Content="4"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="1"
+                x:Name="btn_Five"
+                Content="5"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="2"
+                x:Name="btn_Six"
+                Content="6"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Minuse"
+                Content="—"
+                Background="#FF131313"
+                FontFamily="Arial"
+                FontSize="14"
+                Foreground="White" Click="btn_Minuse_Click"/>
+        </Grid>
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_One"
+                Content="1"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="1"
+                x:Name="btn_Two"
+                Content="2"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="2"
+                x:Name="btn_Three"
+                Content="3"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Pluse"
+                Content="+"
+                Background="#FF131313"
+                FontFamily="Verdana"
+                FontSize="17"
+                Foreground="White" Click="btn_Pluse_Click"/>
+        </Grid>
+        <Grid Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_MinPlus"
+                Content="+/-"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="btn_MinPlus_Click"/>
+            <Button
+                Grid.Column="1"
+                x:Name="btn_Zero"
+                Content="0"
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="2"
+                x:Name="btn_Comma"
+                Content=","
+                Background="#FF060606"
+                FontFamily="Arial"
+                FontSize="15"
+                Foreground="White" Click="Proccess"/>
+            <Button
+                Grid.Column="3"
+                x:Name="btn_Equal"
+                Content="="
+                Background="#FF135A4E"
+                FontFamily="Arial"
+                FontSize="24"
+                Foreground="White" Click="btn_Equal_Click"/>
+        </Grid>
+    </Grid>
+</Window>
